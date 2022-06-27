@@ -30,7 +30,6 @@ function getJoke() {
       return res.json()
     })
     .then(data => {
-      console.log(data)
       return data.body[0]["setup"] + " " + data.body[0]["punchline"];
     });
 }
