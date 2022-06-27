@@ -7,7 +7,8 @@
     "start": "node gamma-pi-bot.js"
   },
   "dependencies": {
-    "discord.js": "^13.8.1"
+    "discord.js": "^13.8.1",
+    "dotenv": "16.0.1"
   },
   "author": "Bilal Hussain",
   "license": "ISC",
