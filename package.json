@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "discord.js": "^13.8.1"
-  }
+  },
   "author": "Bilal Hussain",
   "license": "ISC",
   "engines": {
