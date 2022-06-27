@@ -1,3 +1,14 @@
-"engines": {
+{
+  "name": "isaac-m-jordan-bot",
+  "version": "1.0.0",
+  "description": "discord bot for gamma pi server",
+  "main": "gamma-pi-bot.js",
+  "scripts": {
+    "start": "node gamma-pi-bot.js"
+  },
+  "author": "Bilal Hussain",
+  "license": "ISC",
+  "engines": {
     "node": "16.15.1"
   }
+}
