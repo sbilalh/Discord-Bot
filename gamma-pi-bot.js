@@ -34,6 +34,25 @@ function getJoke() {
     });
 }
 
+function getTrump() {
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/hal+json',
+      'X-RapidAPI-Key': '87ea4d3321msh860880726043332p1db060jsnf40a386d1318',
+      'X-RapidAPI-Host': 'matchilling-tronald-dump-v1.p.rapidapi.com'
+    }
+  };
+
+  fetch('https://matchilling-tronald-dump-v1.p.rapidapi.com/search/quote?size=25&page=The%20page%20number&query=%7Bquery%7D', options)
+    .then(response => {
+      response.json()
+    })
+    .then(data => {
+      return data._embedded.quotes[0]["value"] + " - Donald J. Trump";
+    });
+ }
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 })
@@ -47,6 +66,10 @@ client.on("message", msg => {
 
   if (msg.content === "$joke") {
     getJoke().then(joke => msg.channel.send(joke));
+  }
+  
+  if (msg.content === "$trump") {
+    getTrump().then(trump => msg.channel.send(trump));
   }
 
   if (msg.content === "What do we have?") {
