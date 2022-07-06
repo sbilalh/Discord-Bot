@@ -44,12 +44,12 @@ function getTrump() {
     }
   };
 
-  fetch('https://matchilling-tronald-dump-v1.p.rapidapi.com/search/quote?size=25&page=The%20page%20number&query=%7Bquery%7D', options)
+  fetch('https://matchilling-tronald-dump-v1.p.rapidapi.com/quote/%7Bid%7D', options)
     .then(response => {
       response.json()
     })
     .then(data => {
-      return data._embedded.quotes[0]["value"] + " - Donald J. Trump";
+      return data.value + " - Donald J. Trump";
     });
  }
 
