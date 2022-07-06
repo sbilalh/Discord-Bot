@@ -44,9 +44,9 @@ function getTrump() {
     }
   };
 
-  fetch('https://matchilling-tronald-dump-v1.p.rapidapi.com/quote/%7Bid%7D', options)
+  return fetch('https://matchilling-tronald-dump-v1.p.rapidapi.com/quote/%7Bid%7D', options)
     .then(response => {
-      response.json()
+      return response.json()
     })
     .then(data => {
       return data.value + " - Donald J. Trump";
