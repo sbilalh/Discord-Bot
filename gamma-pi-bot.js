@@ -50,7 +50,7 @@ client.on("message", msg => {
   }
 
   if (msg.content === "What do we have?") {
-    msg.channel.send("BROTHERHOOD!!!");
+    msg.channel.send("UNITY!!!");
   }
 
   if (msg.content === "Recite the Jordan Standard.") {
